@@ -1,0 +1,65 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,15 +1,18 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="3931f39a-c081-44d0-87e8-0d9a16b1fc2a" name="Changes" comment="Proyecto Virgen">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-    </list>
++    <list default="true" id="3931f39a-c081-44d0-87e8-0d9a16b1fc2a" name="Changes" comment="Front-Reeact 1.0" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+@@ -38,7 +41,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1666438831159</updated>
+       <workItem from="1666438832303" duration="1487000" />
+-      <workItem from="1666802655705" duration="222000" />
++      <workItem from="1666802655705" duration="613000" />
+     </task>
+     <task id="LOCAL-00001" summary="Proyecto Virgen">
+       <created>1666439446871</created>
+@@ -47,7 +50,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1666439446871</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="Front-Reeact 1.0">
++      <created>1666803265137</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1666803265138</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -66,6 +76,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Proyecto Virgen" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Proyecto Virgen" />
++    <MESSAGE value="Front-Reeact 1.0" />
++    <option name="LAST_COMMIT_MESSAGE" value="Front-Reeact 1.0" />
+   </component>
+ </project>
+\ No newline at end of file
