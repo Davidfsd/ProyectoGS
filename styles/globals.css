@@ -50,5 +50,15 @@ a {
 * {
   box-sizing: border-box;
   transition: all 300ms ease;
+}
 
+.btn{
+  width: max-content;
+  padding: 1rem;
+  border-radius: 4rem;
+  border: none;
+  color: white;
+  background-color: var(--themeRed);
+  font-size: 1.1rem;
+  cursor: pointer;
 }
