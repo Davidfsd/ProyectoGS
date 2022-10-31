@@ -12,8 +12,9 @@
     justify-content: flex-start;
 }
 
-.heading>:nth-child(1){
-    color: var(--themeRed);
+.heading>:nth-child(1)
+{
+    color: var(--themeOrange);
     font-size: 1rem;
     margin-bottom: 2rem;
 }
@@ -35,12 +36,15 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: .5rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
+.pizza:hover{
+    cursor: pointer;
+}
 
-.ImageWrapper{
+.imageWrapper{
     height: 16rem;
     width: 22rem;
     position: relative;
@@ -48,10 +52,7 @@
     border-radius: 2rem;
 }
 
-.ImageWrapper>span>img:hover{
+.imageWrapper>span>img:hover{
     transform: scale(1.1);
 }
 
-.pizza:hover{
-    cursor: pointer;
-}
