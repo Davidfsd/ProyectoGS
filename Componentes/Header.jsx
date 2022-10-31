@@ -8,8 +8,8 @@ export default function Header() {
         <div className={css.header}>
             {/* Zona Logo */}
             <div className={css.logo}>
-                <Image src={Logo} alt="" width={50} height={50}/>
-                <span>Nombre</span>
+                <Image src={Logo} alt="" width={90} height={90}/>
+                <span className={css.namelogo}>BocAxo</span>
             </div>
 
             {/* Zona Menu Cabecera */}
