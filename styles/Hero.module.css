@@ -2,13 +2,16 @@
     display: flex;
     position: relative;
     width: 55%;
+    top: 1rem;
 }
+
 .left{
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.cherryDiv{
+
+.Moto{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +21,7 @@
     padding: 1rem;
     border-radius: 2rem;
     font-size: 0.9rem;
-    color:var(--themeRed);
+    color:var(--themeOrange);
     font-weight: bold;
 }
 
@@ -29,7 +32,6 @@
     font-weight: bold;
 }
 
-
 .miniText{
     width: 70%;
     color: var(--gray);
@@ -38,6 +40,12 @@
 
 .btn{
     padding: 1rem 2.5rem;
+    transition: all 300ms ease;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .right{
@@ -56,7 +64,6 @@
     left: -5rem;
 }
 
-
 .ContactUs{
     display: flex;
     align-items: center;
@@ -66,11 +73,11 @@
     padding: 1rem;
     border-radius: 5rem;
     top: 6rem;
-    left: -6rem;
+    left: 27rem;
     gap: 1rem;
     background-color: white;
     box-shadow: var(--shadow);
-    color: var(--themeRed);
+    color: var(--themeOrange);
     transition: all 300ms ease;
 }
 
@@ -89,7 +96,6 @@
     transform: scale(1.1);
 }
 
-
 .Pizza{
     display: flex;
     gap: 1rem;
@@ -98,15 +104,17 @@
     padding: 0.5rem;
     border-radius: 0.5rem;
     position: absolute;
-    bottom: 4rem;
+    bottom: 7rem;
     left: 19rem;
     width: max-content;
     transition: all 300ms ease;
 }
+
 .Pizza:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
+
 .Pizza>:nth-child(1)
 {
     border-radius: 0.5rem;

@@ -13,8 +13,8 @@ export default function Footer() {
         <UilInstagram size='45'/>
       </div>
       <div className={css.logo}>
-        <Image src={Logo} alt="logo" width={50} height={50} />
-        <span>Nombre</span>
+        <Image src={Logo} alt="" width={90} height={90}/>
+        <span className={css.namelogo}>BocAxo</span>
       </div>
     </div>
   );

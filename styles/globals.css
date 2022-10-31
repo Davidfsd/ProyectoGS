@@ -11,7 +11,7 @@ body {
 }
 
 :root{
-  --themeRed: #F54748;
+  --themeOrange: #E3702A;
   --themeBlack: #2E2E2E;
   --pink: #FDECEC;
   --gray: #828282;
@@ -32,7 +32,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--themeRed);
+  background: var(--themeOrange);
   border-radius: 1rem;
 }
 
@@ -58,7 +58,7 @@ a {
   border-radius: 4rem;
   border: none;
   color: white;
-  background-color: var(--themeRed);
+  background-color: var(--themeOrange);
   font-size: 1.1rem;
   cursor: pointer;
 }
