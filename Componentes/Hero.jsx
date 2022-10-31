@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import css from '../styles/Hero.module.css';
-import Cherry from '../assets/Cherry.png';
+import Moto from '../assets/Moto.png';
 import HeroImage from '../assets/Heroimage.png';
 import { UilPhone } from "@iconscout/react-unicons";
 import Pizza1 from "../assets/p1.jpg";
@@ -10,21 +10,21 @@ export default function Hero() {
         <div className={css.container}>
             {/* Zona izquierda Main*/}
             <div className={css.left}>
-                <div className={css.cherryDiv}>
+                <div className={css.Moto}>
                     <span>Mas que rápidos</span>
-                    <Image src={Cherry} alt="" width={40} height={25}/>
+                    <Image src={Moto} alt="" width={40} height={25}/>
                 </div>
             
                 <div className={css.heroText}>
                     <span>Los mas rápidos</span>
                     <span>En la entrega</span>
                     <span>
-                        De su <span style={{color: "var(--themeRed)"}}>Pizza</span>
+                        De su <span style={{color: "var(--themeOrange)"}}>Bocata</span>
                     </span>
                 </div>
                 <span className={css.miniText}>
                     « Servir con sabores de calidad balanceando tradicion
-                    y novedad en cada pizza »
+                    y novedad en cada bocata »
                 </span>
 
                 <button className={`btn ${css.btn}`}>
@@ -41,7 +41,7 @@ export default function Hero() {
                 </div>
 
                 <div className={css.ContactUs}>
-                    <span>Contáctanos</span>
+                    <span>968 25 25 25</span>
                     <div>
                         <UilPhone color="white" />
                     </div>
@@ -52,9 +52,9 @@ export default function Hero() {
                         <Image src={Pizza1} alt="pizza" objectFit="cover" layout="intrinsic"/>
                     </div>
                     <div className={css.details}>
-                        <span>Pizza Italiana</span>
+                        <span>Bocata Escalopines</span>
                         <span>
-                            <span style={{ color: "var(--themeRed)" }}>$ </span> 7.49
+                            <span style={{ color: "var(--themeOrange)" }}>$ </span> 9.00
                         </span>
                     </div>
                 </div>
