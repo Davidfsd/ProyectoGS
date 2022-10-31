@@ -6,7 +6,7 @@ import Services from "../Componentes/Services";
 import { client } from "../lib/client";
 import css from '../styles/Home.module.css'
 
-export default function Home({bocaxo}) {
+export default function Home({pizzas}) {
   return (
       <Layout>
         <div className={css.container}>
@@ -20,20 +20,20 @@ export default function Home({bocaxo}) {
           <main>
             <Hero/> 
             <Services/>   
-            <Menu bocaxo={bocaxo}/>
+            <Menu pizzas={pizzas}/>
           </main>
         </div>
       </Layout>
   );
 }
 
-export const getServerSideProps = async() => {
-  const query = '*[_type == "pizza"]';
-  const bocaxo = await client.fetch(query);
+export const getServerSideProps = async () => {
+  const query = '*[_type == "pizza" && !(_id in path("drafts.**"))]';
+  const pizzas = await client.fetch(query);
   return {
     props: {
-      bocaxo
-    }
-  }
-}
+      pizzas,
+    },
+  };
+};
 

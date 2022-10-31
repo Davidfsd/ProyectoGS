@@ -1,39 +1,39 @@
 export default{
-    name: 'pizza',
-    title: "pizza",
-    type:"document",
+    name: "pizza",
+    title: "Pizza",
+    type: "document",
     fields: [
         {
-            name: 'image',
-            title: ' image',
-            type: 'image',
+            name: "image",
+            title: "Image",
+            type : 'image',
             options: {
                 hotspot: true
             }
         },
         {
             name: 'name',
-            title: 'name',
-            type: 'string'
+            title: "Name",
+            type: "string",
         },
         {
-            name: 'slig',
-            title: 'slug',
-            type: 'slug',
+            name: "slug",
+            title: "Slug",
+            type: "slug",
             options: {
                 source: 'name',
-                maxLength: 90
+                maxLength: 90,
             }
         },
         {
-            name: 'price',
-            title: 'price',
+            name: 'price', 
+            title: 'Price',
             type: 'array',
             of: [{type: 'number'}]
         },
         {
             name: 'details',
-            title: 'details',
+            title: 'Details',
             type: 'string'
         }
     ]
