@@ -9,9 +9,8 @@ export default function Menu({bocaxo}) {
         <div className={css.container}>
 
             <div className={css.heading}>
-                <span>OUR MENU</span>
-                <span>Menu That Always</span>
-                <span>Make you Fall In Love</span>
+                <span>NUESTRO MENU</span>
+                <span>Bocadillos</span>
             </div>
 
         <div className={css.menu}>

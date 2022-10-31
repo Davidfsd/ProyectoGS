@@ -11,6 +11,7 @@ body {
 }
 
 :root{
+  --themeRed: #cf2020;
   --themeOrange: #E3702A;
   --themeBlack: #2E2E2E;
   --pink: #FDECEC;
