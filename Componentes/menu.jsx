@@ -28,9 +28,10 @@ export default function Menu({ pizzas }) {
               </Link>
 
               <span>{pizza.name}</span>
+              <span className={css.details}>{pizza.details}</span>
               <span>
                 <span style={{ color: "var(--themeRed)" }}>$</span>{" "}
-                {pizza.price[1]}
+                    {pizza.price[1]}
               </span>
             </div>
           );

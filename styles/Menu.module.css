@@ -44,6 +44,10 @@
     cursor: pointer;
 }
 
+.details{
+    font-size: small;
+}
+
 .imageWrapper{
     height: 16rem;
     width: 22rem;
