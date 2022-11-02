@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 6rem;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#ffffff, #E3702A);
+    padding-bottom: 1rem;
+  }
+  .container>span{
+    color: var(--themeOrange);
+    font-weight: bold;
+  }
+
+  .logo{
+    display: flex;
+    align-items: center;justify-content: flex-start;
+    gap: 0.5rem;
+    flex:1;
+}
+  .logo>span{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.namelogo{
+  font-family: 'Crafty Girls', cursive;
+}
+
+.redes{
+    display: flex;
+    gap: 1rem;
+}
+.redes>*{
+    fill: var(--themeBlack);
+}

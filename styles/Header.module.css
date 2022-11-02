@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: linear-gradient(#E3702A, #ffffff);
+  width:100%;
+}
+
+.logo{
+  display: flex;
+  align-items: center;justify-content: flex-start;
+  gap: 0.5rem;
+  flex:1;
+}
+
+.logo>span{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.namelogo{
+  font-family: 'Crafty Girls', cursive;
+}
+
+.menu{
+  display: flex;
+  list-style: none;
+  font-size: 1.2rem;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+  z-index: 99;
+  transition: all 300ms ease;
+}
+
+.menu>li:hover{
+  color: var(--themeOrange);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.rightSide{
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+
+.cart{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.badge{
+  display: flex;
+  position: absolute;
+  background-color: var(--themeOrange);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  right: -0.5rem;
+}
