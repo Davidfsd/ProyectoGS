@@ -7,7 +7,7 @@ export default function Menu({ pizzas }) {
   return (
     <div className={css.container}>
       <div className={css.heading}>
-        <span>Nuestro Menu</span>
+        <span id="menu">Nuestro Menu</span>
         <span>Bocadillos</span>
       </div>
       <div className={css.menu}>{
