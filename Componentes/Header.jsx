@@ -28,6 +28,16 @@ export default function Header() {
         <Link href="../#menu">Menu</Link>
         </li>
         <li>Contacto</li>
+        <li>
+            {Order && (
+              <Link href={`/order/${Order}`}>
+                <div className={css.cart}>
+                  Consultar pedido
+                  {Order != ""}
+                </div>
+              </Link>
+            )}
+        </li>
       </ul>
       <div className={css.rightSide}>
         <Link href="/cart">
@@ -41,7 +51,7 @@ export default function Header() {
           <Link href={`/order/${Order}`}>
             <div className={css.cart}>
               <UilReceipt size="35" color="#2E2E2E" />
-              {Order != "" && <div className={css.badge}>0</div>}
+              {Order != "" && <div className={css.badge}>1</div>}
             </div>
           </Link>
         )}
