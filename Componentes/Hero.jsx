@@ -3,7 +3,7 @@ import css from '../styles/Hero.module.css';
 import Moto from '../assets/Moto.png';
 import HeroImage from '../assets/Heroimage.png';
 import { UilPhone } from "@iconscout/react-unicons";
-import Pizza1 from "../assets/p1.jpg";
+import Bocata1 from "../assets/p1.jpg";
 
 export default function Hero() {
     return(
@@ -47,9 +47,9 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className={css.Pizza}>
+                <div className={css.Bocata}>
                     <div>
-                        <Image src={Pizza1} alt="pizza" objectFit="cover" layout="intrinsic"/>
+                        <Image src={Bocata1} alt="bocata" objectFit="cover" layout="intrinsic"/>
                     </div>
                     <div className={css.details}>
                         <span>Bocata Escalopines</span>

@@ -7,7 +7,7 @@ import { client } from "../lib/client";
 import css from '../styles/Home.module.css';
 
 
-export default function Home({pizzas}) {
+export default function Home({bocatas}) {
   return (
       <Layout>
         <div className={css.container}>
@@ -21,7 +21,7 @@ export default function Home({pizzas}) {
           <main>
             <Hero/> 
             <Services/>   
-            <Menu pizzas={pizzas}/>
+            <Menu bocatas={bocatas}/>
           </main>
         </div>
       </Layout>
@@ -29,11 +29,11 @@ export default function Home({pizzas}) {
 }
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "pizza" && !(_id in path("drafts.**"))]';
-  const pizzas = await client.fetch(query);
+  const query = '*[_type == "bocata" && !(_id in path("drafts.**"))]';
+  const bocatas = await client.fetch(query);
   return {
     props: {
-      pizzas,
+      bocatas,
     },
   };
 };

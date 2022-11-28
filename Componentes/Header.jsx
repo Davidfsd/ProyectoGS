@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function Header() {
 
-  const items = useStore((state) => state.cart.pizzas.length);
+  const items = useStore((state) => state.cart.bocatas.length);
   const [Order, setOrder] = useState("")
   useEffect(() => {
     setOrder(localStorage.getItem("order"));

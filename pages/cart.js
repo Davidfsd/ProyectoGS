@@ -11,20 +11,20 @@ import { useRouter } from "next/router";
 // import getStripe from "../lib/stripePromise";
 export default function Cart() {
   const CartData = useStore((state) => state.cart);
-  const removePizza = useStore((state) => state.removePizza);
+  const removeBocata = useStore((state) => state.removeBocata);
   const [PaymentMethod, setPaymentMethod] = useState(null);
   const [Order, setOrder] = useState(
     typeof window !== "undefined" && localStorage.getItem("order")
   );
     const router = useRouter()
-  // Remove Pizza from zustand store
+  // Remove Bocata from zustand store
   const handleRemove = (index) => {
-    removePizza(index);
+    removeBocata(index);
     toast.error("Item removed");
   };
   // Calculat total
   const total = () =>
-    CartData.pizzas.reduce((a, b) => a + b.quantity * b.price, 0);
+    CartData.bocatas.reduce((a, b) => a + b.quantity * b.price, 0);
 
 
   const handleOnDelivery = ()=> {
@@ -41,7 +41,7 @@ export default function Cart() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(CartData.pizzas),
+      body: JSON.stringify(CartData.bocatas),
     });
 
     if (response.statusCode === 500) return;
@@ -58,7 +58,7 @@ export default function Cart() {
           <table className={css.table}>
             <thead>
               <tr>
-                <th>Pizza</th>
+                <th>Bocata</th>
                 <th>Name</th>
                 <th>Size</th>
                 <th>Price</th>
@@ -68,9 +68,9 @@ export default function Cart() {
               </tr>
             </thead>
             <tbody className={css.tbody}>
-              {CartData.pizzas.length > 0 &&
-                CartData.pizzas?.map((pizza, i) => {
-                  const src = urlFor(pizza.image).url();
+              {CartData.bocatas.length > 0 &&
+                CartData.bocatas?.map((bocata, i) => {
+                  const src = urlFor(bocata.image).url();
                   return (
                     <tr key={i}>
                       <td className={css.imageTd}>
@@ -83,17 +83,17 @@ export default function Cart() {
                           width={85}
                         />
                       </td>
-                      <td>{pizza.name}</td>
+                      <td>{bocata.name}</td>
                       <td>
-                        {pizza.size === 0
+                        {bocata.size === 0
                           ? "Small"
-                          : pizza.size === 1
+                          : bocata.size === 1
                           ? "Medium"
                           : "Large"}
                       </td>
-                      <td>{pizza.price}</td>
-                      <td>{pizza.quantity}</td>
-                      <td>{pizza.price * pizza.quantity}</td>
+                      <td>{bocata.price}</td>
+                      <td>{bocata.quantity}</td>
+                      <td>{bocata.price * bocata.quantity}</td>
                       <td>
                         <span
                           style={{
@@ -116,14 +116,14 @@ export default function Cart() {
           <div className={css.details}>
             <div>
               <span>Items</span>
-              <span>{CartData.pizzas.length}</span>
+              <span>{CartData.bocatas.length}</span>
             </div>
             <div>
               <span>Total</span>
               <span>$ {total()}</span>
             </div>
           </div>
-          {!Order && CartData.pizzas.length ? (
+          {!Order && CartData.bocatas.length ? (
             <div className={css.buttons}>
               <button className={`btn`} onClick={handleOnDelivery}>
                 Pay on Delivery

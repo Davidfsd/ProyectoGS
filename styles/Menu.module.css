@@ -31,7 +31,7 @@
     justify-content: space-around;
 }
 
-.pizza{
+.bocata{
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -40,7 +40,7 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
-.pizza:hover{
+.bocata:hover{
     cursor: pointer;
 }
 
