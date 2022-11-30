@@ -19,7 +19,7 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
     const handleSubmit = async(e)=> {
         e.preventDefault();
         const id = await createOrder({...FormData, total, PaymentMethod});
-        toast.success("Order Placed!");
+        toast.success("Pedido Realizado!");
         resetCart();
         {
         typeof window !== "undefined" && localStorage.setItem("order", id);
@@ -34,21 +34,21 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
         overlayBlur={3}
         opened={opened}
         onClose={()=>setOpened(null)}
-      >
+        >
         {/* Modal content */}
         <form onSubmit={handleSubmit} className={css.formContainer}>
-            <input type="text" name='name' required placeholder="Name" onChange={handleInput}/>
-            <input type="text" name='phone' required placeholder="Phone Number" onChange={handleInput}/>
-            <textarea required name='address' placeholder="Address" rows={3} columnns={8} onChange={handleInput}/>
+            <input type="text" name='name' required placeholder="Nombre" onChange={handleInput}/>
+            <input type="text" name='phone' required placeholder="Número de telefono" onChange={handleInput}/>
+            <textarea required name='address' placeholder="Dirección" rows={3} columnns={8} onChange={handleInput}/>
             {PaymentMethod===0 ? 
             <span>
-                You will pay <span>$ {total}</span> on delivery
+                Vas a pagar <span>{total}€</span> en tu entrega
             </span> : 
             <span>
-                Your have made Payment successfully of <span>${total}</span>
+                Ha realizado el pago con éxito <span>{total}€</span>
             </span>
 }
-            <button type='submit' className="btn">Place Order</button>
+            <button type='submit' className="btn">Realizar Pedido</button>
         </form>
       <Toaster />
       </Modal>

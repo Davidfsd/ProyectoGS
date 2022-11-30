@@ -30,7 +30,7 @@ export default function Menu({ bocatas }) {
               <span>{bocata.name}</span>
               <span className={css.details}>{bocata.details}</span>
               <span>
-                <span style={{ color: "var(--themeRed)" }}>$</span>{" "}
+                <span style={{ color: "var(--themeRed)" }}>€</span>{" "}
                     {bocata.price[1]}
               </span>
             </div>

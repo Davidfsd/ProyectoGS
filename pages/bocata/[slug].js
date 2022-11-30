@@ -47,7 +47,7 @@ export default function Bocata({ bocata }) {
           <span>{bocata.name}</span>
           <span>{bocata.details}</span>
           <span>
-            <span style={{ color: "var(--themeRed)" }}>$</span>{" "}
+            <span style={{ color: "var(--themeRed)" }}>€</span>{" "}
             {bocata.price[Size]}
           </span>
 

@@ -20,7 +20,7 @@ export default function Cart() {
   // Remove Bocata from zustand store
   const handleRemove = (index) => {
     removeBocata(index);
-    toast.error("Item removed");
+    toast.error("Unidad Eliminada");
   };
   // Calculat total
   const total = () =>
@@ -59,10 +59,10 @@ export default function Cart() {
             <thead>
               <tr>
                 <th>Bocata</th>
-                <th>Name</th>
-                <th>Size</th>
-                <th>Price</th>
-                <th>Quantity</th>
+                <th>Nombre</th>
+                <th>Tamaño</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
                 <th>Total</th>
                 <th></th>
               </tr>
@@ -115,20 +115,18 @@ export default function Cart() {
           <span>Cart</span>
           <div className={css.details}>
             <div>
-              <span>Items</span>
+              <span>Unidades</span>
               <span>{CartData.bocatas.length}</span>
             </div>
             <div>
               <span>Total</span>
-              <span>$ {total()}</span>
+              <span>€{total()}</span>
             </div>
           </div>
           {!Order && CartData.bocatas.length ? (
             <div className={css.buttons}>
-              <button className={`btn`} onClick={handleOnDelivery}>
-                Pay on Delivery
-              </button>
-              <button className={`btn`} onClick={handleCheckout}>Pay Now</button>
+              <button className={`btn`} onClick={handleOnDelivery}>Pagar en entrega</button>
+              <button className={`btn`} onClick={handleCheckout}>Pagar ahora</button>
             </div>
           ) : null}
         </div>

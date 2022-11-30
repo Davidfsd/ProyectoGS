@@ -54,7 +54,7 @@ export default function Hero() {
                     <div className={css.details}>
                         <span>Bocata Escalopines</span>
                         <span>
-                            <span style={{ color: "var(--themeOrange)" }}>$ </span> 9.00
+                            <span style={{ color: "var(--themeOrange)" }}>€ </span> 9.00
                         </span>
                     </div>
                 </div>
