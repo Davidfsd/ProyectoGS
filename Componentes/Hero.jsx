@@ -27,9 +27,6 @@ export default function Hero() {
                     y novedad en cada bocata »
                 </span>
 
-                <button className={`btn ${css.btn}`}>
-                    Comenzar
-                </button>
             </div>
 
             <div className={css.grow}></div>
@@ -46,7 +43,7 @@ export default function Hero() {
                     <div>
                         <Image src={Bocata1} alt="bocata" objectFit="cover" layout="intrinsic"/>
                     </div>
-                    <div className={css.details}>
+                    <div>
                         <span>Bocata Escalopines</span>
                         <span>
                             <span style={{ color: "var(--themeOrange)" }}>€ </span> 9.00

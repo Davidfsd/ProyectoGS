@@ -3,10 +3,28 @@ import css from "../styles/Services.module.css";
 import s1 from "../assets/s1.png";
 import s2 from "../assets/s2.png";
 import s3 from "../assets/s3.png";
+import { UilSearchAlt } from "@iconscout/react-unicons";
+
 
 export default function Services() {
   return (
     <>
+    <div className={css.contenedor}>
+      <div className={css.Buscar}>
+            <div className={css.localiza}>
+              ¿Como vá tu pedido?
+            </div>   
+            <div className={css.introduce}>
+              Introduce tu numero de pedido
+            </div>          
+            <div className={css.divBuscar}>
+              <input className={css.input} type="text" name="buscarPedido" placeholder="ej. 123456789"/>
+              <div className={css.lupa}><UilSearchAlt/>  </div>
+                   
+            </div>
+      </div>
+      </div>
+
       <div className={css.heading}>
         <span>QUE SERVIMOS?</span>
         <span>Tu comida favorita</span>
