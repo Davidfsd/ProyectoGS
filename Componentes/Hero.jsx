@@ -2,7 +2,7 @@ import Image from 'next/image';
 import css from '../styles/Hero.module.css';
 import Moto from '../assets/Moto.png';
 import HeroImage from '../assets/Heroimage.png';
-import { UilPhone } from "@iconscout/react-unicons";
+
 import Bocata1 from "../assets/p1.jpg";
 
 export default function Hero() {
@@ -40,12 +40,7 @@ export default function Hero() {
                     <Image src={HeroImage} alt="heroImage" layout="intrinsic" />
                 </div>
 
-                <div className={css.ContactUs}>
-                    <span>968 25 25 25</span>
-                    <div>
-                        <UilPhone color="white" />
-                    </div>
-                </div>
+
 
                 <div className={css.Bocata}>
                     <div>

@@ -5,7 +5,8 @@ import { UilShoppingBag, UilReceipt } from "@iconscout/react-unicons";
 import { useStore } from "../store/store";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import ThemeProvider from 'react-bootstrap/ThemeProvider'
+import { UilPhone } from "@iconscout/react-unicons";
+
 
 export default function Header() {
 
@@ -16,7 +17,6 @@ export default function Header() {
   },[]);
 
   return (
-    <ThemeProvider breakpoints={['lg']} minBreakpoint="sm">
         <div className={css.header}>
           <div className={css.logo}>
             <Image src={Logo} alt="logo" width={50} height={50} />
@@ -41,6 +41,12 @@ export default function Header() {
                 )}
             </li>
           </ul>
+          <div className={css.ContactUs}>
+                    <span>968 25 25 25</span>
+                    <div>
+                        <UilPhone color="white" />
+                    </div>
+                </div>
           <div className={css.rightSide}>
             <Link href="/cart">
               <div className={css.cart}>
@@ -59,6 +65,5 @@ export default function Header() {
             )}
           </div>
         </div>
-      </ThemeProvider>
   );
 }
