@@ -3,13 +3,13 @@ import { urlFor } from "../lib/client";
 import Link from "next/link";
 import css from "../styles/Menu.module.css";
 
-export default function Menu({ bocatas,bebidas }) {
+export default function Menu({ bocatas,bebidas,entrante }) {
   return (
 
     
     <div className={css.container}>
       <div className={css.heading}>
-        <span id="menu">Nuestro Menu</span>
+        <span id="bocadillos">Nuestro Menu</span>
         {/* Menu Bocadillos */}
         <span>Bocadillos</span>
       </div>
@@ -33,8 +33,8 @@ export default function Menu({ bocatas,bebidas }) {
               <span>{bocata.name}</span>
               <span className={css.details}>{bocata.details}</span>
               <span>
+                {bocata.price[1]}
                 <span style={{ color: "var(--themeRed)" }}>€</span>{" "}
-                    {bocata.price[1]}
               </span>
             </div>
           );
@@ -42,32 +42,32 @@ export default function Menu({ bocatas,bebidas }) {
       </div>
 
       <div className={css.heading}>
-      <span id="Entrantes"></span>
+      <span id="entrantes"></span>
         {/* Menu Entrantes */}
         <span>Entrantes</span>
       </div>
       <div className={css.menu}>{
-        bocatas.map((bocata, id) => {
-          const src = urlFor(bocata.image).url();
+        entrante.map((entrante, id) => {
+          const src = urlFor(entrante.image).url();
           return (
             <div className={css.bocata} key={id}>
-              <Link href={`./bocata/${bocata.slug.current}`}>
+              <Link href={`./bocata/${entrante.slug.current}`}>
                 <div className={css.imageWrapper}>
                   <Image
                     loader={() => src}
                     src={src}
-                    alt="bocata"
+                    alt="entrante"
                     objectFit="cover"
                     layout="fill"
                   />
                 </div>
               </Link>
 
-              <span>{bocata.name}</span>
-              <span className={css.details}>{bocata.details}</span>
+              <span>{entrante.name}</span>
+              <span className={css.details}>{entrante.details}</span>
               <span>
+                {entrante.price[1]}
                 <span style={{ color: "var(--themeRed)" }}>€</span>{" "}
-                    {bocata.price[1]}
               </span>
             </div>
           );
@@ -75,7 +75,7 @@ export default function Menu({ bocatas,bebidas }) {
       </div>
 
       <div className={css.heading}>
-      <span id="Bebidas"></span>
+      <span id="bebidas"></span>
         {/* Menu Bebidas */}
         <span>Bebidas</span>
       </div>

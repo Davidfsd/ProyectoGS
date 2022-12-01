@@ -33,7 +33,7 @@ export default function Categorias() {
       <div className={css.services}>
         <div className={css.feature}>
           <div className={css.ImageWrapper}>
-            <Link href="../#menu">
+            <Link href="../#entrantes">
                 <Image src={Entrantes} alt="s1" objectFit="cover" layout="intrinsic" />
             </Link>
           </div>
@@ -43,7 +43,9 @@ export default function Categorias() {
 
         <div className={css.feature}>
           <div className={css.ImageWrapper}>
-            <Image src={Bocata} alt="s1" objectFit="cover" layout="intrinsic" />
+            <Link href="../#bocadillos">
+              <Image src={Bocata} alt="s1" objectFit="cover" layout="intrinsic" />
+            </Link>
           </div>
           <span className={css.categoria}>Bocadillos</span>
         
@@ -51,7 +53,9 @@ export default function Categorias() {
 
         <div className={css.feature}>
           <div className={css.ImageWrapper}>
-            <Image src={Bebidas} alt="s1" objectFit="cover" layout="intrinsic" />
+            <Link href="../#bebidas">
+              <Image src={Bebidas} alt="s1" objectFit="cover" layout="intrinsic" />
+            </Link>
           </div>
           <span className={css.categoria}>Bebidas</span>
         

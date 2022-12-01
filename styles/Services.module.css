@@ -1,11 +1,11 @@
 
-
 .services{
     display: flex;
     margin-top: 3rem;
     gap: 3rem;
     align-items: center;
     justify-content: center;
+    padding-top: 3rem;
 }
 .feature{
     display: flex;

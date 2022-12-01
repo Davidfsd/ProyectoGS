@@ -27,14 +27,14 @@ export default function Header() {
               <Link href="../">Inicio</Link>
             </li>
             <li>
-            <Link href="../#menu">Menu</Link>
+            <Link href="../#bocadillos">Menu</Link>
             </li>
             <li>Contacto</li>
             <li>
                 {Order && (
                   <Link href={`/order/${Order}`}>
                     <div className={css.cart}>
-                      Consultar pedido
+                      Pedido
                       {Order != ""}
                     </div>
                   </Link>

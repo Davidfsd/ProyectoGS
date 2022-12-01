@@ -1,5 +1,5 @@
 export default{
-    name: "Entrante",
+    name: "entrante",
     title: "Entrante",
     type: "document",
     fields: [

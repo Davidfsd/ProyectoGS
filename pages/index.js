@@ -7,7 +7,7 @@ import Categorias from "../Componentes/Categorias";
 import { client } from "../lib/client";
 import css from '../styles/Home.module.css';
 
-export default function Home({bocatas,bebidas}) {
+export default function Home({bocatas,bebidas,entrante}) {
   return (
         <Layout>
           <div className={css.container}>
@@ -21,7 +21,7 @@ export default function Home({bocatas,bebidas}) {
             <main>
               <Hero/>
               <Categorias/>   
-              <Menu bocatas={bocatas} bebidas={bebidas}/>
+              <Menu bocatas={bocatas} bebidas={bebidas} entrante={entrante}/>
               <Services/> 
             </main>
           </div>
@@ -33,11 +33,14 @@ export default function Home({bocatas,bebidas}) {
 export const getServerSideProps = async () => {
   const query = '*[_type == "bocata" && !(_id in path("drafts.**"))]';
   const query2 = '*[_type == "bebida" && !(_id in path("drafts.**"))]';
+  const query3 = '*[_type == "entrante" && !(_id in path("drafts.**"))]';
+
   const bocatas = await client.fetch(query);
   const bebidas = await client.fetch(query2);
+  const entrante = await client.fetch(query3);
   return {
     props: {
-      bocatas,bebidas
+      bocatas,bebidas,entrante
     },
   };
 };

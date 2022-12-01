@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 2.2fr 1fr;
     gap: 2rem;
+    padding-top: 9rem;
   }
   .table {
     width: 100%;

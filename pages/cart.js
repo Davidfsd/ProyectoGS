@@ -2,13 +2,12 @@ import Image from "next/image";
 import Layout from "../componentes/Layout";
 import { urlFor } from "../lib/client";
 import { useStore } from "../store/store";
-import css from "../styles/Cart.module.css";
+import css from "../styles/cart.module.css";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import OrderModal from "../componentes/OrderModal";
 import { useRouter } from "next/router";
 
-// import getStripe from "../lib/stripePromise";
 export default function Cart() {
   const CartData = useStore((state) => state.cart);
   const removeBocata = useStore((state) => state.removeBocata);
@@ -58,7 +57,7 @@ export default function Cart() {
           <table className={css.table}>
             <thead>
               <tr>
-                <th>Bocata</th>
+                <th>Imagen</th>
                 <th>Nombre</th>
                 <th>Tamaño</th>
                 <th>Precio</th>
