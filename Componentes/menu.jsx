@@ -3,7 +3,7 @@ import { urlFor } from "../lib/client";
 import Link from "next/link";
 import css from "../styles/Menu.module.css";
 
-export default function Menu({ bocatas,bebidas,entrante }) {
+export default function Menu({ bocatas,bebidas,entrantes }) {
   return (
 
     
@@ -47,11 +47,11 @@ export default function Menu({ bocatas,bebidas,entrante }) {
         <span>Entrantes</span>
       </div>
       <div className={css.menu}>{
-        entrante.map((entrante, id) => {
+        entrantes.map((entrante, id) => {
           const src = urlFor(entrante.image).url();
           return (
             <div className={css.bocata} key={id}>
-              <Link href={`./bocata/${entrante.slug.current}`}>
+              <Link href={`./entrante/${entrante.slug.current}`}>
                 <div className={css.imageWrapper}>
                   <Image
                     loader={() => src}
