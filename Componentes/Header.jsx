@@ -41,12 +41,12 @@ export default function Header() {
                 )}
             </li>
           </ul>
-          <div className={css.ContactUs}>
-                    <span>968 25 25 25</span>
-                    <div>
-                        <UilPhone color="white" />
-                    </div>
-                </div>
+            <div className={css.ContactUs}>
+              <span>968 25 25 25</span>
+              <div>
+                  <UilPhone color="white" />
+              </div>
+            </div>
           <div className={css.rightSide}>
             <Link href="/cart">
               <div className={css.cart}>

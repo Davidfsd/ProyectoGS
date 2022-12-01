@@ -39,7 +39,7 @@
 }
 
 .menu>li:hover{
-  color: var(--themeOrange);
+  color: var(--pink);
   cursor: pointer;
   transform: scale(1.1);
 }
@@ -63,7 +63,7 @@
 .badge{
   display: flex;
   position: absolute;
-  background-color: var(--themeOrange);
+  background-color: var(--themeBlack);
   color: white;
   border-radius: 50%;
   width: 20px;

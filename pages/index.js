@@ -3,10 +3,11 @@ import Hero from "../Componentes/Hero";
 import Layout from "../Componentes/Layout";
 import Menu from "../Componentes/menu";
 import Services from "../Componentes/Services";
+import Categorias from "../Componentes/Categorias";
 import { client } from "../lib/client";
 import css from '../styles/Home.module.css';
 
-export default function Home({bocatas}) {
+export default function Home({bocatas,bebidas}) {
   return (
         <Layout>
           <div className={css.container}>
@@ -18,9 +19,10 @@ export default function Home({bocatas}) {
             </Head>
             {/* body */}
             <main>
-              <Hero/> 
-              <Services/>   
-              <Menu bocatas={bocatas}/>
+              <Hero/>
+              <Categorias/>   
+              <Menu bocatas={bocatas} bebidas={bebidas}/>
+              <Services/> 
             </main>
           </div>
         </Layout>
@@ -30,11 +32,14 @@ export default function Home({bocatas}) {
 
 export const getServerSideProps = async () => {
   const query = '*[_type == "bocata" && !(_id in path("drafts.**"))]';
+  const query2 = '*[_type == "bebida" && !(_id in path("drafts.**"))]';
   const bocatas = await client.fetch(query);
+  const bebidas = await client.fetch(query2);
   return {
     props: {
-      bocatas,
+      bocatas,bebidas
     },
   };
 };
+
 
