@@ -1,12 +1,13 @@
 .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 3rem;
     margin-top: 6rem;
     align-items: center;
     justify-content: center;
     background: linear-gradient(#ffffff, #E3702A);
     padding-bottom: 1rem;
+    align-items: flex-start;
   }
   .container>span{
     color: var(--themeOrange);

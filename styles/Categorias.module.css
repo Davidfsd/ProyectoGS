@@ -105,8 +105,13 @@ font-weight: bold;
 
 .input{
     margin-left: 2rem;
-    border: none;
     height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+.input:focus{
+    border: 0;
 }
 
 .divBuscar{

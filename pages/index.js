@@ -31,13 +31,13 @@ export default function Home({bocatas,bebidas,entrantes}) {
 }
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "bocata" && !(_id in path("drafts.**"))]';
-  const query2 = '*[_type == "bebida" && !(_id in path("drafts.**"))]';
-  const query3 = '*[_type == "entrante" && !(_id in path("drafts.**"))]';
+  const queryBocatas = '*[_type == "bocata" && !(_id in path("drafts.**"))]';
+  const queryBebidas = '*[_type == "bebida" && !(_id in path("drafts.**"))]';
+  const queryEntrantes = '*[_type == "entrante" && !(_id in path("drafts.**"))]';
 
-  const bocatas = await client.fetch(query);
-  const bebidas = await client.fetch(query2);
-  const entrantes = await client.fetch(query3);
+  const bocatas = await client.fetch(queryBocatas);
+  const bebidas = await client.fetch(queryBebidas);
+  const entrantes = await client.fetch(queryEntrantes);
   return {
     props: {
       bocatas,bebidas,entrantes
