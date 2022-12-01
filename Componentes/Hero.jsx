@@ -2,7 +2,6 @@ import Image from 'next/image';
 import css from '../styles/Hero.module.css';
 import Moto from '../assets/Moto.png';
 import HeroImage from '../assets/Heroimage.png';
-
 import Bocata1 from "../assets/p1.jpg";
 
 export default function Hero() {
@@ -19,7 +18,7 @@ export default function Hero() {
                     <span>Los mas rápidos</span>
                     <span>En la entrega</span>
                     <span>
-                        De su <span style={{color: "var(--themeOrange)"}}>Bocata</span>
+                        De su <span style={{color: "var(--themeOrange)"}}>Pedido</span>
                     </span>
                 </div>
                 <span className={css.miniText}>
