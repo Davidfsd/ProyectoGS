@@ -5,9 +5,11 @@ import { UilBill } from "@iconscout/react-unicons";
 import Cooking from "../../assets/cooking.png";
 import Onway from "../../assets/onway.png";
 import { UilBox } from "@iconscout/react-unicons";
+import { UilCopy } from "@iconscout/react-unicons";
 import Spinner from "../../assets/spinner.svg";
 import { client } from "../../lib/client";
 import { useEffect } from "react";
+
 
 export const getServerSideProps = async ({ params }) => {
   const query = `*[_type == 'order' && _id == '${params.id}']`;
@@ -33,7 +35,10 @@ export default function Orders({ order }) {
         <div className={css.details}>
           <div>
             <span>ID pedido</span>
-            <span>{order._id}</span>
+            <span>{order._id}
+              <UilCopy  className={css.copy} width={25} height={25} onClick={() =>  navigator.clipboard.writeText(order._id)}/>
+            </span>
+            
           </div>
           <div>
             <span>Nombre del cliente</span>
