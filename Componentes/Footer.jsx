@@ -12,38 +12,26 @@ export default function Footer() {
         <Image src={Logo} alt="" width={90} height={90}/>
         <span className={css.namelogo}>BocAxo</span>
       </div>
-      <div>
-        <span>Sobre nosotros</span>
-        <ul>
-          <li>Quienes somos</li>
-          <li>Trabaja con nosotros</li>
-          <li>Contacto</li>
-          <li>Seguridad</li>
-        </ul>    
+      <div className={css.centrarFooter}>
+        <span className={css.titulo}>Sobre nosotros</span>
+          <span>Quienes somos</span>
+          <span>Trabaja con nosotros</span>
+          <span>Contacto</span>
+          <span>Seguridad</span>
       </div>
       <div>
-        <span>Opinión</span>
-          
-      </div>
-      <div>
-      <span>Síguenos</span>
+      <span className={css.titulo}>Síguenos</span>
         <div className={css.redes}>
-          <UilFacebook size='45'/>
+          <UilFacebook size='40'/>
 
-          <UilInstagram size='45'/>
+          <UilInstagram size='40'/>
         </div>
       </div>
-      <div>
-        <ul>
-          <li>CONDICIONES DE USO</li>
-          <li>POLÍTICA DE PRIVACIDAD</li>
-          <li>POLÍTICA DE COOKIES</li>
-          <li>TÉRMINOS Y CONDICIONES</li>
-        </ul>  
+      <div className={css.centrarFooter}>
+          <span>CONDICIONES DE USO</span>
+          <span>POLÍTICA DE PRIVACIDAD</span>
+          <span>POLÍTICA DE COOKIES</span>      
       </div>
-      
-      
-      
     </div>
   );
 }

@@ -20,9 +20,9 @@ export default function Categorias() {
                 Introduce tu numero de pedido
               </div>          
               <div className={css.divBuscar}>
-                <input className={css.input} type="url" name="buscarPedido" placeholder="ej. 123456789"/>
-                  <a href="http://localhost:3000/order/"></a>
-                <div className={css.lupa}><UilSearchAlt/></div>
+                <input className={css.input} type="text" name="buscarPedido" placeholder="ej. 123456789"/>
+                <div className={css.lupa}><UilSearchAlt/>  </div>
+                    
               </div>
         </div>
     </div>
