@@ -104,14 +104,15 @@ font-weight: bold;
 }
 
 .input{
-    margin-left: 2rem;
+    margin-left: 3rem;
     height: 100%;
     width: 100%;
     border: 0;
+    font-size: 20px;
 }
 
 .input:focus{
-    border: 0;
+    outline: none;
 }
 
 .divBuscar{
