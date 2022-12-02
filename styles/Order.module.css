@@ -4,7 +4,7 @@
     gap: 4rem;
     align-items: center;
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 10rem;
 }
 .heading{
     font-size: 2rem;
@@ -60,4 +60,9 @@
     background-color: rgb(159, 230, 53);
     padding: 0.5rem;
     font-size: 0.8rem;
+}
+
+.copy{
+    cursor: pointer;
+    margin-left: 0.5rem;
 }
