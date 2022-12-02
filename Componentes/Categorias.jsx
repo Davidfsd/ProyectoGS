@@ -5,9 +5,22 @@ import Bebidas from "../assets/Bebidas.png";
 import Entrantes from "../assets/Entrantes.png";
 import Link from "next/link";
 import { UilSearchAlt } from "@iconscout/react-unicons";
+import React, { useState } from 'react';
 
 
 export default function Categorias() {
+
+  const [Order, setOrder] = useState('');
+
+  const submitValue = () => {
+    const frmdetails = {
+        'Order' : Order,
+
+    }
+    console.log(Order);
+}
+
+
   return (
     <>
  
@@ -20,8 +33,12 @@ export default function Categorias() {
                 Introduce tu numero de pedido
               </div>          
               <div className={css.divBuscar}>
-                <input className={css.input} type="text" name="buscarPedido" placeholder="ej. 123456789"/>
-                <div className={css.lupa}><UilSearchAlt/>  </div>
+                <input className={css.input} type="text" placeholder="ej. 123456789" onChange={e => setOrder(e.target.value)}/>
+                { (
+                  <Link href={`/order/${Order}`}>
+                    <button  className={css.lupa} onClick={submitValue}><UilSearchAlt/></button>
+                  </Link>
+                )}
                     
               </div>
         </div>
