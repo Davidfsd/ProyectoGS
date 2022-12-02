@@ -22,20 +22,16 @@ export default function Footer() {
       <div>
       <span className={css.titulo}>Síguenos</span>
         <div className={css.redes}>
-          <UilFacebook size='45'/>
+          <UilFacebook size='40'/>
 
-          <UilInstagram size='45'/>
+          <UilInstagram size='40'/>
         </div>
       </div>
       <div className={css.centrarFooter}>
-
+          <span>CONDICIONES DE USO</span>
           <span>POLÍTICA DE PRIVACIDAD</span>
-          <span>POLÍTICA DE COOKIES</span>
-          <span>TÉRMINOS Y CONDICIONES</span>
+          <span>POLÍTICA DE COOKIES</span>      
       </div>
-      
-      
-      
     </div>
   );
 }

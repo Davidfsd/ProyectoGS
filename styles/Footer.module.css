@@ -7,6 +7,8 @@
     height: 300px;
     color: white;
    padding-top: 50px;
+   border-top-left-radius: 800px 90px;
+   border-top-right-radius: 800px 90px;
   }
 
   .container>span{
@@ -30,14 +32,19 @@
 
 .namelogo{
   font-family: 'Crafty Girls', cursive;
+  color: var(--themeOrange);
 }
 
 .redes{
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+
 }
 .redes>*{
-    fill: var(--themeBlack);
+  fill: #ffffff;
+    
 }
 
 .centrarFooter{
