@@ -112,7 +112,7 @@ font-weight: bold;
 }
 
 .input:focus{
-    border: 0;
+    outline: none;
 }
 
 .divBuscar{
