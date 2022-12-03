@@ -132,7 +132,7 @@ export default function Cart() {
       </div>
       <Toaster />
 
-      {/* Model for Cash delivery */}
+      {/* Modelo para entrega de efectivo */}
       <OrderModal
         opened={PaymentMethod === 0}
         setOpened={setPaymentMethod}

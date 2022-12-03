@@ -1,3 +1,4 @@
+
 .container {
   display: flex;
   justify-content: center;
@@ -5,10 +6,13 @@
   margin-top: 6rem;
   background: rgb(32, 32, 32);
   height: 300px;
+  width: 100%;
   color: white;
-  padding-top: 5rem;
+  padding-top: 3rem;
   border-top-left-radius: 800px 90px;
   border-top-right-radius: 800px 90px;
+  position: absolute;
+  bottom: 0;
 }
 
 .container>span {
@@ -42,6 +46,7 @@
   align-items: center;
   padding: 0.5rem;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
 .redes>* {

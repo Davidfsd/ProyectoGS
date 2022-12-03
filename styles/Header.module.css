@@ -6,7 +6,10 @@
   background: #E3702A;
   width:100%;
   position: fixed;
+  left: 0;
+  top: 0;
   z-index: 1;  
+  
 }
 
 .logo{

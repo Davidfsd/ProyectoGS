@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { UilPhone } from "@iconscout/react-unicons";
 
 
+
 export default function Header() {
 
   const items = useStore((state) => state.cart.bocatas.length);
@@ -18,10 +19,12 @@ export default function Header() {
 
   return (
         <div className={css.header}>
+          <Link href="../">
           <div className={css.logo}>
             <Image src={Logo} alt="logo" width={50} height={50} />
             <span className={css.namelogo}>BocAxo</span>
           </div>
+          </Link>
           <ul className={css.menu}>
             <li>
               <Link href="../">Inicio</Link>

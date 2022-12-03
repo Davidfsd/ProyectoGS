@@ -134,27 +134,26 @@ font-weight: bold;
     align-items: center;
     justify-content: center;
     width: 20%;
-    height: 90%;
-    padding: 0.5rem;
+    height: 85%;
     border-radius: 5rem;
     top: 6rem;
     left: 27rem;
     gap: 1rem;
     background-color: var(--themeOrange) ;
-    box-shadow: var(--shadow);
     color: rgb(255, 255, 255);
     transition: all 300ms ease;
     margin-right: 0.5rem;
+    border: none;
   }
   
   .lupa>div{
     background: var(--themeOrange);
     border-radius: 50%;
-    width: 2.5rem;
+    width: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2.5rem;
+    height: 2rem; 
   }
   
   .lupa:hover{

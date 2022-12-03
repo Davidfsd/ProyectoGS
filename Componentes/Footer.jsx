@@ -1,7 +1,8 @@
 import css from "../styles/Footer.module.css"
 import Logo from "../assets/Logo.png"
 import Image from "next/image";
-import { UilInstagram, UilFacebook, UilGithub } from '@iconscout/react-unicons'
+import { UilInstagram, UilFacebook, UilTwitter } from '@iconscout/react-unicons'
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -14,16 +15,17 @@ export default function Footer() {
       </div>
       <div className={css.centrarFooter}>
         <span className={css.titulo}>Sobre nosotros</span>
-          <span>Quienes somos</span>
+          <Link href="../quienesSomos">Quienes somos</Link>
+
           <span>Trabaja con nosotros</span>
           <span>Contacto</span>
       </div>
       <div>
         <span className={css.titulo}>Síguenos</span>
         <div className={css.redes}>
-          <UilFacebook size='40'/>
-
-          <UilInstagram size='40'/>
+          <Link href="http://www.facebook.es"><UilFacebook size='40'/></Link>
+          <Link href="https://twitter.com/"><UilTwitter size='40'/></Link>
+          <Link href="https://www.instagram.com/"><UilInstagram size='40'/></Link>
         </div>
       </div>
       <div className={css.centrarFooter}>
