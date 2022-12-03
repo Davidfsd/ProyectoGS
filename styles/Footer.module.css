@@ -1,14 +1,14 @@
 .container{
     display: flex;
-    gap: 3rem;
-    margin-top: 6rem;
     justify-content: center;
+    align-items: flex-start;
+    margin-top: 6rem;
     background: rgb(32, 32, 32);
     height: 300px;
     color: white;
-   padding-top: 50px;
-   border-top-left-radius: 800px 90px;
-   border-top-right-radius: 800px 90px;
+    padding-top: 5rem;
+    border-top-left-radius: 800px 90px;
+    border-top-right-radius: 800px 90px;
   }
 
   .container>span{
@@ -23,7 +23,8 @@
 
   .logo{
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+
 }
   .logo>span{
     font-weight: bold;
@@ -31,6 +32,7 @@
 }
 
 .namelogo{
+  
   font-family: 'Crafty Girls', cursive;
   color: var(--themeOrange);
 }
@@ -52,4 +54,7 @@
   flex-direction: column;
   align-items: center;
   font-size: 15px;
+  padding-left: 7em;
+  padding-right: 7rem;
+  gap: 1rem;
 }

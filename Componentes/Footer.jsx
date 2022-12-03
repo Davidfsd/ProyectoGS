@@ -17,10 +17,9 @@ export default function Footer() {
           <span>Quienes somos</span>
           <span>Trabaja con nosotros</span>
           <span>Contacto</span>
-          <span>Seguridad</span>
       </div>
       <div>
-      <span className={css.titulo}>Síguenos</span>
+        <span className={css.titulo}>Síguenos</span>
         <div className={css.redes}>
           <UilFacebook size='40'/>
 
