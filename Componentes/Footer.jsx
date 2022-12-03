@@ -29,7 +29,8 @@ export default function Footer() {
         </div>
       </div>
       <div className={css.centrarFooter}>
-          <span>CONDICIONES DE USO</span>
+        <Link href="../cookies">CONDICIONES DE USO</Link>
+
           <span>POLÍTICA DE PRIVACIDAD</span>
           <span>POLÍTICA DE COOKIES</span>      
       </div>
