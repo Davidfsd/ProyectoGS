@@ -32,7 +32,9 @@ export default function Header() {
             <li>
             <Link href="../#bocadillos">Menu</Link>
             </li>
-            <li>Contacto</li>
+            <li>
+              <Link href="../contacto">Contacto</Link>
+            </li>
             <li>
                 {Order && (
                   <Link href={`/order/${Order}`}>

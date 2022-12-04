@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { useStore } from "../store/store";
 
 export default function OrderModal({opened, setOpened, PaymentMethod}) {
+    
     const router = useRouter();
     const theme = useMantineTheme()
     const [FormData, setFormData] = useState({})

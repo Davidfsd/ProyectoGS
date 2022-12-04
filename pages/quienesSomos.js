@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Layout from "../Componentes/Layout";
 import css from '../styles/QuienesSomos.module.css';
 
