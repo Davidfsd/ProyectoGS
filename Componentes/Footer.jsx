@@ -16,7 +16,7 @@ export default function Footer() {
       <div className={css.centrarFooter}>
         <span className={css.titulo}>Sobre nosotros</span>
           <Link href="../quienesSomos">Quienes somos</Link>
-          <span>Trabaja con nosotros</span>
+          <Link href="../trabaja">Trabaja con nosotros</Link>
           <Link href="../contacto">Contacto</Link>
       </div>
       <div>

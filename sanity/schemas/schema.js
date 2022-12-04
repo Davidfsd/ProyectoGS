@@ -8,6 +8,7 @@ import bebida from "./bebida";
 import entrante from "./entrante";
 import orders from "./orders";
 import contacto from "./contacto";
+import trabaja from "./trabaja";
 // import orders from "./orders";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -15,5 +16,5 @@ export default createSchema({
   name: "default",
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([bocata,entrante,bebida,orders,contacto]),
+  types: schemaTypes.concat([bocata,entrante,bebida,orders,contacto,trabaja]),
 });
