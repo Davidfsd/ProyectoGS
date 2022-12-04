@@ -1,6 +1,6 @@
 export default {
-    name: "cv",
-    title: "CV",
+    name: "trabaja",
+    title: "Trabaja",
     type: "document",
     fields: [
       {
@@ -14,15 +14,15 @@ export default {
       {
         name: "telefono",
         title: "Telefono",
-        type: "number",
+        type: "string",
+        options : {
+          maxLength: 10
+        }
       },
       {
         name: "documento",
         title: "Documento",
         type: "string",
-        options : {
-          maxLength: 20
-        }
       },
       {
         name: "numIdentidad",
@@ -67,9 +67,9 @@ export default {
       {
         name: "codigoPostal",
         title: "CodigoPostal",
-        type: "number",
+        type: "string",
         options : {
-          maxLength: 10
+          maxLength: 6
         }
       },
       {

@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 
 
-export default function Formulario() {
+export default function Trabaja() {
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -13,6 +13,10 @@ export default function Formulario() {
         setIsChecked(!isChecked);
         console.log(setIsChecked);
       };
+
+    const handleSelect = (e) =>{
+        console.log(e);
+    }
 
 
     const [FormData, setFormData] = useState({})
@@ -57,11 +61,12 @@ export default function Formulario() {
                     </div>
 
                     <div className={css.divSpan}>
-                        <select name='documento' className={css.select} onChange={handleInput}>
-                            <option value="dni">DNI</option>
-                            <option value="nie">NIE</option>
-                            <option value="pasaporte">Pasaporte</option>
-                        </select>
+                        <input type="radio" name='documento' required placeholder="Nº de identidad" value="DNI" onChange={handleInput}/>
+                            <label for="dni" value>DNI</label>
+                        <input type="radio" name='documento' required placeholder="Nº de identidad" value="NIE" onChange={handleInput}/>
+                            <label for="NIE">NIE</label>
+                        <input type="radio" name='documento' required placeholder="Nº de identidad" value="Pasaporte" onChange={handleInput}/>
+                            <label for="Pasaporte">Pasaporte</label>  
                     </div>
                     <input type="text" name='numIdentidad' required placeholder="Nº de identidad" onChange={handleInput}/>
                     
