@@ -8,7 +8,7 @@ export default function Formulario() {
 
     const [isChecked, setIsChecked] = useState(false);
 
-    const handleOnChangeTrue = () => {
+    const handleOnChange = () => {
         setIsChecked(!isChecked);
         console.log(setIsChecked);
       };
@@ -23,7 +23,7 @@ export default function Formulario() {
     const handleSubmit = async(e)=> {
         if (!isChecked) {
             e.preventDefault();
-            toast.success("Acepta las politicas");
+            toast.error("Acepta las politicas");
         }else{
             e.preventDefault();
             await createContacto({...FormData});
@@ -67,7 +67,7 @@ export default function Formulario() {
                     <textarea type="text" name='mensaje' required placeholder="Mensaje" rows={15} cols={71} onChange={handleInput}/>
 
                     <div className={css.divDatos}>
-                        <input type="checkbox" name="politicas" value="acepto" onChange={handleOnChangeTrue}/> 
+                        <input type="checkbox" name="politicas" value="acepto" onChange={handleOnChange}/> 
                         <span>He leído y acepto la política de protección de datos.</span>
                     </div>
                     <div className={css.divButtons}>
