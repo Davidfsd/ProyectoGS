@@ -45,7 +45,6 @@
     width: 90%;
     height: 30px;
     margin: 0.5rem;
-    background-color: rgba(235, 196, 196, 0.911);
     border: solid;
     border-width: thin;
     border-color: 1px black;
@@ -54,7 +53,6 @@
 
 .formulario textarea
 {
-    background-color: rgba(235, 196, 196, 0.911);
     border: solid;
     border-color: 1px black;
     border-width: thin;
