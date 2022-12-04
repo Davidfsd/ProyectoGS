@@ -2,7 +2,9 @@
     display: flex;
     position: relative;
     width: 55%;
-    top: 1rem;
+    top: 1rem;  
+    margin-top: 8rem;
+    
 }
 
 .left{
@@ -38,16 +40,6 @@
     font-weight:600;
 }
 
-.btn{
-    padding: 1rem 2.5rem;
-    transition: all 300ms ease;
-}
-
-.btn:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
 .right{
     position: relative;
     
@@ -64,39 +56,9 @@
     left: -5rem;
 }
 
-.ContactUs{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: max-content;
-    padding: 1rem;
-    border-radius: 5rem;
-    top: 6rem;
-    left: 27rem;
-    gap: 1rem;
-    background-color: white;
-    box-shadow: var(--shadow);
-    color: var(--themeOrange);
-    transition: all 300ms ease;
-}
 
-.ContactUs>div{
-    background: rgb(59 208 59);
-    border-radius: 50%;
-    width: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-}
 
-.ContactUs:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.Pizza{
+.Bocata{
     display: flex;
     gap: 1rem;
     background-color: white;
@@ -110,12 +72,12 @@
     transition: all 300ms ease;
 }
 
-.Pizza:hover{
+.Bocata:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.Pizza>:nth-child(1)
+.Bocata>:nth-child(1)
 {
     border-radius: 0.5rem;
     width: 6rem;
@@ -123,7 +85,7 @@
     overflow: hidden;
 }
 
-.Pizza>:nth-child(2)
+.Bocata>:nth-child(2)
 {
     display: flex;
     flex-direction: column;

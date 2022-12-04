@@ -2,16 +2,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  background: linear-gradient(#E3702A, #ffffff);
+  padding-top: 10px;
+  background: #E3702A;
   width:100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;  
+  
 }
 
 .logo{
   display: flex;
-  align-items: center;justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-end;
   gap: 0.5rem;
   flex:1;
+  flex-direction: column;
 }
 
 .logo>span{
@@ -35,7 +42,7 @@
 }
 
 .menu>li:hover{
-  color: var(--themeOrange);
+  color: var(--pink);
   cursor: pointer;
   transform: scale(1.1);
 }
@@ -44,7 +51,7 @@
   display: flex;
   gap: 1rem;
   flex: 1;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
 
@@ -59,7 +66,7 @@
 .badge{
   display: flex;
   position: absolute;
-  background-color: var(--themeOrange);
+  background-color: var(--themeBlack);
   color: white;
   border-radius: 50%;
   width: 20px;
@@ -67,4 +74,35 @@
   align-items: center;
   justify-content: center;
   right: -0.5rem;
+}
+
+.ContactUs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  top: 6rem;
+  left: 27rem;
+  gap: 1rem;
+  color: var(--themeOrange);
+  box-shadow: var(--shadow);
+  background-color: white;
+  transition: all 300ms ease;
+}
+
+.ContactUs>div{
+  background: rgb(59 208 59);
+  border-radius: 50%;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+}
+
+.ContactUs:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }

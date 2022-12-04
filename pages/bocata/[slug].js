@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Layout from "../../Componentes/Layout";
 import { client, urlFor } from "../../lib/client";
-import css from "../../styles/Pizza.module.css";
+import css from "../../styles/Bocata.module.css";
 import LeftArrow from "../../assets/arrowLeft.png";
 import RightArrow from "../../assets/arrowRight.png";
 import { useState } from "react";
@@ -10,10 +10,10 @@ import toast, { Toaster } from "react-hot-toast";
 
 
 // Codigo Cliente
-export default function Pizza({ pizza }) {
+export default function Bocata({ bocata }) {
   const [Quantity, setQuantity] = useState(1);
   const [Size, setSize] = useState(1);
-  const src = urlFor(pizza.image)?.url();
+  const src = urlFor(bocata.image)?.url();
 
   const handleQuan = (type) => {
     type === "inc"
@@ -23,9 +23,9 @@ export default function Pizza({ pizza }) {
       : setQuantity((prev) => prev - 1);
   };
 
-  const addPizza = useStore((state) => state.addPizza);
+  const addBocata = useStore((state) => state.addBocata);
   const addToCart = () => {
-    addPizza({ ...pizza, price: pizza.price[Size], quantity: Quantity, size: Size });
+    addBocata({ ...bocata, price: bocata.price[Size], quantity: Quantity, size: Size });
     toast.success("Añadido al carrito");
   };
 
@@ -36,7 +36,7 @@ export default function Pizza({ pizza }) {
           <Image
             loader={() => src}
             src={src}
-            alt="pizza"
+            alt="bocata"
             objectFit="cover"
             layout="fill"
             unoptimized
@@ -44,11 +44,11 @@ export default function Pizza({ pizza }) {
         </div>
 
         <div className={css.right}>
-          <span>{pizza.name}</span>
-          <span>{pizza.details}</span>
+          <span>{bocata.name}</span>
+          <span>{bocata.details}</span>
           <span>
-            <span style={{ color: "var(--themeRed)" }}>$</span>{" "}
-            {pizza.price[Size]}
+            <span style={{ color: "var(--themeRed)" }}>€</span>{" "}
+            {bocata.price[Size]}
           </span>
 
           {/* Tamaño */}
@@ -105,7 +105,7 @@ export default function Pizza({ pizza }) {
 // Codigo Servidor
 export async function getStaticPaths() {
   const paths = await client.fetch(
-    `*[_type == "pizza" && defined(slug.current)][].slug.current`
+    `*[_type == "bocata" && defined(slug.current)][].slug.current`
   );
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
@@ -115,12 +115,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { slug = "" } = context.params;
-  const pizza = await client.fetch(`
-    *[_type == "pizza" && slug.current == '${slug}'][0]
+  const bocata = await client.fetch(`
+    *[_type == "bocata" && slug.current == '${slug}'][0]
   `);
   return {
     props: {
-      pizza,
+      bocata,
     },
   };
 }
