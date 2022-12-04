@@ -18,7 +18,8 @@ export default async function handler(req, res) {
             fechaNacimiento: newTrabaja.fechaNacimiento,
             codigoPostal: newTrabaja.codigoPostal,
             ciudad: newTrabaja.ciudad, 
-            direccion: newTrabaja.direccion
+            direccion: newTrabaja.direccion,
+            curriculum: newTrabaja.curriculum
 
           })
           .then((data) => {

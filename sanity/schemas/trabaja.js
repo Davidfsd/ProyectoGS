@@ -87,6 +87,11 @@ export default {
         options : {
           maxLength: 200
         }
+      },
+      {
+        name: "curriculum",
+        title: "Curriculum",
+        type: "file",
       }
     ],
 }

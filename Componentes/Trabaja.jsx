@@ -14,10 +14,6 @@ export default function Trabaja() {
         console.log(setIsChecked);
       };
 
-    const handleSelect = (e) =>{
-        console.log(e);
-    }
-
 
     const [FormData, setFormData] = useState({})
 
@@ -32,6 +28,7 @@ export default function Trabaja() {
         }else{
             e.preventDefault();
             await createTrabaja({...FormData});
+
             toast.success("Formulario Enviado");
         }
     }
@@ -109,6 +106,11 @@ export default function Trabaja() {
                         <span>Dirección</span> 
                     </div>
                     <input type="text" name='direccion' required placeholder="Direccion" onChange={handleInput}/>
+
+                    <div className={css.divSpan}>
+                        <span>Adjunta tu curriculum</span> 
+                    </div>
+                    <input type="file" name="curriculum" required onChange={handleInput}></input>
 
 
 
