@@ -3,6 +3,34 @@
     padding-bottom: 20rem;
 }
 
+.divSpan{
+    width: 100%;
+    padding-left: 1.8rem;
+}
+
+.divSpan > span{
+    font-weight: 900;
+}
+
+.divButtons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.divDatos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+}
 
 #TittleCo
 {
@@ -23,13 +51,6 @@
     font-weight: 400;
 }
 
-#fondo3
-{
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-    width: 100%;
-}
 
 .formulario {
     width: 100%;
@@ -41,15 +62,23 @@
     align-items: center;
   }
 
-.formulario input {
+.formulario input[type=text] {
     width: 90%;
     height: 30px;
     margin: 0.5rem;
     border: solid;
     border-width: thin;
     border-color: 1px black;
-  }
+}
   
+.formulario input[type=checkbox] {
+    width: 10%;
+    height: 30px;
+    margin: 0.5rem;
+    border: solid;
+    border-width: thin;
+    border-color: 1px black;
+}
 
 .formulario textarea
 {
@@ -91,4 +120,8 @@
     text-align: center;
     color: rgb(73, 72, 72);
     font-size: 1.2em;
+}
+
+#topping{
+    width: 10%;
 }
