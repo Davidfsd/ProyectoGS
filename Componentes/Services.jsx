@@ -7,13 +7,7 @@ import s3 from "../assets/s3.png";
 export default function Services() {
   return (
     <>
-      <div className={css.heading}>
-        <span>QUE SERVIMOS?</span>
-        <span>Tu comida favorita</span>
-        <span>Delivery Partner</span>
-      </div>
-
-      <div className={css.services}>
+     <div className={css.services}>
         <div className={css.feature}>
           <div className={css.ImageWrapper}>
             <Image src={s1} alt="s1" objectFit="cover" layout="intrinsic" />

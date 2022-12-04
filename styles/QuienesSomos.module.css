@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 12rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+.Footer_container{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
