@@ -109,7 +109,9 @@ export default function Formulario() {
 
                     <div className={css.divDatos}>
                         <input type="checkbox" name="politicas" value="acepto" onChange={handleOnChange}/> 
-                        <span>Consiento que mis datos sean utilizados para esta vacante y para futuros procesos de selección que encajen con mi perfil. Para ello acepto la <Link href="../privacidad">Política de Privacidad</Link> *</span>
+                        <span>Consiento que mis datos sean utilizados para esta vacante y para futuros procesos de selección que encajen con mi perfil. Para ello acepto la 
+                            <Link href="../privacidad">Política de Privacidad</Link> *
+                        </span>
                     </div>
                     <div className={css.divButtons}>
                         <button type='submit' className="btn">Enviar</button>
