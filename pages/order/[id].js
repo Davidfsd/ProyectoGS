@@ -49,6 +49,10 @@ export default function Orders({ order }) {
             <span>{order.phone}</span>
           </div>
           <div>
+            <span>Email</span>
+            <span>{order.email}</span>
+          </div>
+          <div>
             <span>Método de pago</span>
             <span>
               {order.method === 0

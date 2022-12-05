@@ -10,6 +10,7 @@ export default async function handler(req, res) {
             _type: "order",
             name: newOrder.name,
             address: newOrder.address,
+            email: newOrder.email,
             phone: newOrder.phone,
             total: newOrder.total,
             method: newOrder.method,
@@ -17,6 +18,7 @@ export default async function handler(req, res) {
           })
           .then((data) => {
             res.status(200).json(data._id);
+
           });
       } catch (error) {
         console.log(error);

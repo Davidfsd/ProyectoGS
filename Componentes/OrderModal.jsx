@@ -5,6 +5,9 @@ import { createOrder } from "../lib/orderHandler";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import { useStore } from "../store/store";
+import emailjs from '@emailjs/browser';
+import React, {useRef} from "react";
+
 
 export default function OrderModal({opened, setOpened, PaymentMethod}) {
     
@@ -13,10 +16,20 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
     const [FormData, setFormData] = useState({})
     const resetCart = useStore((state) => state.resetCart);
     const total = typeof window !== "undefined" && localStorage.getItem("total")
+    const form = useRef();
 
     const handleInput = (e)=> {
         setFormData({...FormData, [e.target.name]: e.target.value})
     }
+
+    const sendEmail = (e)=> {
+        emailjs.sendForm('service_a90q4xr', 'template_j96xyuy', form.current, 'W4ua3CcurT_GrSrRe').then((result) => {
+            console.log(result);
+        }, (error) =>{
+            console.log(error.text);
+        });
+    };
+
     const handleSubmit = async(e)=> {
         e.preventDefault();
         const id = await createOrder({...FormData, total, PaymentMethod});
@@ -25,6 +38,8 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
         {
         typeof window !== "undefined" && localStorage.setItem("order", id);
         }
+
+        sendEmail();
         router.push(`/order/${id}`);
     }
     return(
@@ -37,9 +52,11 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
         onClose={()=>setOpened(null)}
         >
         {/* Modal content */}
-        <form onSubmit={handleSubmit} className={css.formContainer}>
+        <form onSubmit={handleSubmit} className={css.formContainer} ref={form}>
             <input type="text" name='name' required placeholder="Nombre" onChange={handleInput}/>
             <input type="text" name='phone' required placeholder="Número de telefono" onChange={handleInput}/>
+            <input type="text" name='email' required placeholder="Email" onChange={handleInput}/>
+            <input type="hidden" name='id' />
             <textarea required name='address' placeholder="Dirección" rows={3} columnns={8} onChange={handleInput}/>
             {PaymentMethod===0 ? 
             <span>
@@ -48,7 +65,7 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
             <span>
                 Ha realizado el pago con éxito <span>{total}€</span>
             </span>
-}
+            }
             <button type='submit' className="btn">Realizar Pedido</button>
         </form>
       <Toaster />
