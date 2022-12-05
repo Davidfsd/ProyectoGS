@@ -22,7 +22,7 @@ export default async function handler(req, res) {
 
           return {
             price_data: {
-              currency: "usd",
+              currency: "EUR",
               product_data: {
                 name: item.name,
                 images: [newImage],

@@ -1,29 +1,28 @@
 import create from "zustand";
-import { persist } from "zustand/middleware";
 
 export const useStore = create(
   
   (set) => ({
     // Carrito
     cart: {
-      pizzas: [],
+      bocatas: [],
       quantity: 0,
       total: 0,
     },
-    addPizza: (data) =>
+    addBocata: (data) =>
       set((state) => ({
         cart: {
-          pizzas: [...state.cart.pizzas, data],
+          bocatas: [...state.cart.bocatas, data],
         },
       })),
-    removePizza: (index) =>
+    removeBocata: (index) =>
       set((state) => ({
-        cart: { pizzas: state.cart.pizzas.filter((_, i) => i != index) },
+        cart: { bocatas: state.cart.bocatas.filter((_, i) => i != index) },
       })),
     resetCart: () =>
       set(() => ({
         cart: {
-          pizzas: [],
+          bocatas: [],
           quantity: 0,
           total: 0,
         },
@@ -47,7 +46,7 @@ export const useStore = create(
       set(()=> (
         {
           cart: {
-            pizzas: [],
+            bocatas: [],
             quantity: 0,
             total: 0,
           },

@@ -1,0 +1,127 @@
+.container{
+    padding-top: 10rem;
+    padding-bottom: 20rem;
+}
+
+.divSpan{
+    width: 100%;
+    padding-left: 1.8rem;
+}
+
+.divSpan > span{
+    font-weight: 900;
+}
+
+.divButtons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.divDatos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+
+#TittleCo
+{
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(73, 72, 72);
+    text-shadow: rgba(0, 0, 0, 0.418) 0 -2px;
+}
+
+.infoMain
+{
+    width: 50%;
+    padding: 5%;
+    text-align: justify;
+    color: rgb(73, 72, 72);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+
+.formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.formulario input[type=text] {
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
+    border: solid;
+    border-width: thin;
+    border-color: 1px black;
+}
+  
+.formulario input[type=checkbox] {
+    width: 10%;
+    height: 30px;
+    margin: 0.5rem;
+    border: solid;
+    border-width: thin;
+    border-color: 1px black;
+}
+
+.formulario textarea
+{
+    border: solid;
+    border-color: 1px black;
+    border-width: thin;
+}
+
+#buttonForm
+{
+    width: 20%;
+    height: 30%;
+    color:black;
+    background-color: #756b0a;
+    border-radius: 12px;
+    font-weight: 600;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;   
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+    font-size: 15px;
+}
+
+#buttonForm:hover
+{
+    background-color: #ecd713;
+    color: black;
+}
+
+#subtitle
+{
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(73, 72, 72);
+    font-size: 1.2em;
+}
+
+#topping{
+    width: 10%;
+}

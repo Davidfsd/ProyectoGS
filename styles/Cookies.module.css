@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    flex-direction:column;
+    padding-top: 8rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-bottom: 25rem;
+}
+
+.titulo{
+    display: flex;
+}
+
+.enlace{
+    color: blue;
+}

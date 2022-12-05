@@ -1,37 +1,64 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    margin-top: 6rem;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(#ffffff, #E3702A);
-    padding-bottom: 1rem;
-  }
-  .container>span{
-    color: var(--themeOrange);
-    font-weight: bold;
-  }
 
-  .logo{
-    display: flex;
-    align-items: center;justify-content: flex-start;
-    gap: 0.5rem;
-    flex:1;
-}
-  .logo>span{
-    font-weight: bold;
-    font-size: 1.5rem;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 6rem;
+  background: rgb(32, 32, 32);
+  height: 300px;
+  width: 100%;
+  color: white;
+  padding-top: 3rem;
+  border-top-left-radius: 800px 90px;
+  border-top-right-radius: 800px 90px;
+  position: absolute;
+  bottom: 0;
 }
 
-.namelogo{
+.container>span {
+  color: var(--themeOrange);
+  font-weight: bold;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo>span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.namelogo {
   font-family: 'Crafty Girls', cursive;
+  color: var(--themeOrange);
 }
 
-.redes{
-    display: flex;
-    gap: 1rem;
+.redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  cursor: pointer;
 }
-.redes>*{
-    fill: var(--themeBlack);
+
+.redes>* {
+  fill: #ffffff;
+}
+
+.centrarFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  padding-left: 7em;
+  padding-right: 7rem;
+  gap: 1rem;
 }
