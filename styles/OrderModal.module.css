@@ -22,3 +22,17 @@
     font-size: 1rem;
     background-color: rgb(59 208 59);
 }
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 1rem;
+  }
+  .tbody > tr > td {
+    text-align: center;
+  }
+  .tbody > tr > :nth-child(2) {
+    width: 15%;
+  }
+  .imageTd > span > img {
+    border-radius: 1rem;
+  }
