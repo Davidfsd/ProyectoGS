@@ -12,6 +12,7 @@ import { urlFor } from "../lib/client";
 
 export default function OrderModal({opened, setOpened, PaymentMethod}) {
     
+    const CartData = useStore((state) => state.cart);
     const router = useRouter();
     const theme = useMantineTheme()
     const [FormData, setFormData] = useState({})
@@ -60,7 +61,7 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
             <input type="text" name='name' required placeholder="Nombre" onChange={handleInput}/>
             <input type="text" name='phone' required placeholder="Número de telefono" onChange={handleInput}/>
             <input type="text" name='email' required placeholder="Email" onChange={handleInput}/>
-            <input type="hidden" name='id' value={idOrder} />
+            <input type="hidden" name='id'/>
             <textarea required name='address' placeholder="Dirección" rows={3} columnns={8} onChange={handleInput}/>
             <table className={css.table}>
                 <thead>
