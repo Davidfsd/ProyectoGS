@@ -15,23 +15,26 @@ export default function Cart() {
   const [Order, setOrder] = useState(
     typeof window !== "undefined" && localStorage.getItem("order")
   );
-    const router = useRouter()
-  // Remove Bocata from zustand store
+
+  const router = useRouter()
+
+  // Eliminar Item del carrito
   const handleRemove = (index) => {
     removeBocata(index);
     toast.error("Unidad Eliminada");
   };
-  // Calculat total
+
+  // Calcular total
   const total = () =>
     CartData.bocatas.reduce((a, b) => a + b.quantity * b.price, 0);
 
-
+  // Contrareembolso Pago
   const handleOnDelivery = ()=> {
-
     typeof window !== "undefined" && localStorage.setItem('total', total())
     setPaymentMethod(0);
   }
-    // Stripe Payment
+
+  // Stripe Pago online
   const handleCheckout = async () => {
     typeof window !== "undefined" && localStorage.setItem('total', total())
     setPaymentMethod(1)
