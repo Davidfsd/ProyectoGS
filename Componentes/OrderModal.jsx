@@ -9,6 +9,19 @@ import emailjs from '@emailjs/browser';
 import React, {useRef} from "react";
 import { urlFor } from "../lib/client";
 
+function generarRandom(num) {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const charactersLength = characters.length;
+    let result = "";
+      for (let i = 0; i < num; i++) {
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+  
+    return result;
+  }
+
+const idOrder=generarRandom(6);
+
 
 export default function OrderModal({opened, setOpened, PaymentMethod}) {
     
@@ -61,7 +74,7 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
             <input type="text" name='name' required placeholder="Nombre" onChange={handleInput}/>
             <input type="text" name='phone' required placeholder="Número de telefono" onChange={handleInput}/>
             <input type="text" name='email' required placeholder="Email" onChange={handleInput}/>
-            <input type="hidden" name='id'/>
+            <input type="hidden" name='id' value={idOrder}/>
             <textarea required name='address' placeholder="Dirección" rows={3} columnns={8} onChange={handleInput}/>
             <table className={css.table}>
                 <thead>
