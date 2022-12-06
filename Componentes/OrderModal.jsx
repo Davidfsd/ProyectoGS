@@ -58,6 +58,20 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
         sendEmail();
         router.push(`/order/${id}`);
     }
+
+    const guardarComanda = (contenido, nombre) => {
+        const a = document.createElement("a");
+        const archivo = new Blob([contenido], { type: 'text/plain' });
+        const url = URL.createObjectURL(archivo);
+        a.href = url;
+        a.download = nombre;
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    guardarComanda(CartData.bocatas?.map((bocata, i) => { return ("Nombre: "+bocata.name+' '+"Tamaño: "+bocata.size+' '+"Cantidad: "+bocata.quantity+" ");}), "Comanda.txt");
+
+    // CartData.bocatas?.map((bocata, i) => { return (bocata.name+' '+bocata.size+' '+bocata.quantity);})
   
     return(
         <>
@@ -74,43 +88,15 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
             <input type="text" name='name' required placeholder="Nombre" onChange={handleInput}/>
             <input type="text" name='phone' required placeholder="Número de telefono" onChange={handleInput}/>
             <input type="text" name='email' required placeholder="Email" onChange={handleInput}/>
-            <input type="hidden" name='id' value={idOrder}/>
             <textarea required name='address' placeholder="Dirección" rows={3} columnns={8} onChange={handleInput}/>
-            <table className={css.table}>
-                <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Tamaño</th>
-                    <th>Cantidad</th>
-                </tr>
-                </thead>
-                <tbody className={css.tbody}>
-                    {CartData.bocatas.length > 0 &&
-                        CartData.bocatas?.map((bocata, i) => {
-                        const src = urlFor(bocata.image).url();
-                            return (
-                                <tr key={i}>
-                                    <td>{bocata.name}</td>
-                                    <td>
-                                        {bocata.size === 0
-                                        ? "Small"
-                                        : bocata.size === 1
-                                        ? "Medium"
-                                        : "Large"}
-                                    </td>
-                                    <td>{bocata.quantity}</td>
-                                </tr>
-                            );
-                    })}
-                </tbody>
-            </table>
+            
             {PaymentMethod===0 ? 
-            <span>
-                Vas a pagar <span>{total}€</span> en tu entrega
-            </span> : 
-            <span>
-                Ha realizado el pago con éxito <span>{total}€</span>
-            </span>
+                <span>
+                    Vas a pagar <span>{total}€</span> en tu entrega
+                </span> : 
+                <span>
+                    Ha realizado el pago con éxito <span>{total}€</span>
+                </span>
             }
             <button type='submit' className="btn">Realizar Pedido</button>
         </form>

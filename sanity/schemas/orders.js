@@ -54,7 +54,11 @@ export default {
             name: 'status',
             title: "Status",
             type: "number"
-        }
-
+        },
+        {
+            name: 'items',
+            title: 'Items',
+            type: 'string', 
+          }
     ]
 }

@@ -15,6 +15,7 @@ export default async function handler(req, res) {
             phone: newOrder.phone,
             total: newOrder.total,
             method: newOrder.method,
+            items: newOrder.items,
             status: 1,
           })
           .then((data) => {
