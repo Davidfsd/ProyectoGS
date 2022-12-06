@@ -64,7 +64,17 @@ export default {
                 type: 'reference',
                 to: [
                   {type: 'bocata'},
+                ]
+              },
+                {
+                type: 'reference',
+                to: [
                   {type: 'entrante'},
+                ]
+              },
+                {
+                type: 'reference',
+                to: [
                   {type: 'bebida'},
                 ]
               }
