@@ -122,7 +122,7 @@ export default function Cart() {
             </div>
             <div>
               <span>Total</span>
-              <span>€{total()}</span>
+              <span>{total()}€</span>
             </div>
           </div>
           {!Order && CartData.bocatas.length ? (

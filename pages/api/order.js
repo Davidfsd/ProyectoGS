@@ -16,6 +16,7 @@ export default async function handler(req, res) {
             total: newOrder.total,
             method: newOrder.method,
             status: 1,
+            productoSelect: newOrder.bocatas
           })
           .then((data) => {
             res.status(200).json(data._id);

@@ -21,7 +21,7 @@ export default function Home({bocatas,bebidas,entrantes}) {
             <main>
               <Hero/>
               <Categorias/>   
-              <Menu bocatas={bocatas} bebidas={bebidas} entrantes={entrantes}/>
+              <Menu bocatas={bocatas} bebidas={bebidas} entrantes={entrantes} />
               <Services/> 
             </main>
           </div>
@@ -38,9 +38,15 @@ export const getServerSideProps = async () => {
   const bocatas = await client.fetch(queryBocatas);
   const bebidas = await client.fetch(queryBebidas);
   const entrantes = await client.fetch(queryEntrantes);
+
+  // const queryIdOrder = '*[_type == "order" && !(_id in path("order.idOrder.**"))]';
+  // const idOrder = await client.fetch(queryIdOrder);
+  // console.log(idOrder);
+  
   return {
     props: {
       bocatas,bebidas,entrantes
+      
     },
   };
 };

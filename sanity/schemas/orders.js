@@ -54,7 +54,30 @@ export default {
             name: 'status',
             title: "Status",
             type: "number"
-        }
+        },
+        {
+            name: 'productoSelect',
+            title: 'ProductoSelect',
+            type: 'array',
+            of: [
+              {
+                type: 'reference',
+                to: [
+                  {type: 'bocata'},
+                  {type: 'entrante'},
+                  {type: 'bebida'},
+                ]
+              }
+            ]
+          },
+        // {
+        //     name: 'quantity',
+        //     title: "Quantity",
+        //     type: "number",
+        //     validation: Rule => Rule.required().positive().integer()
+        // },
+        
+        
 
     ]
 }

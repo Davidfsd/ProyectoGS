@@ -5,9 +5,6 @@ import { createOrder } from "../lib/orderHandler";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import { useStore } from "../store/store";
-import emailjs from '@emailjs/browser';
-import React, {useRef} from "react";
-import { urlFor } from "../lib/client";
 
 function generarRandom(num) {
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -31,34 +28,27 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
     const [FormData, setFormData] = useState({})
     const resetCart = useStore((state) => state.resetCart);
     const total = typeof window !== "undefined" && localStorage.getItem("total")
-    const form = useRef();
 
     const handleInput = (e)=> {
         setFormData({...FormData, [e.target.name]: e.target.value})
     }
 
-    const sendEmail = (e)=> {
-        emailjs.sendForm('service_a90q4xr', 'template_j96xyuy', form.current, 'W4ua3CcurT_GrSrRe').then((result) => {
-            console.log(result);
-        }, (error) =>{
-            console.log(error.text);
-        });
-    };
 
     const handleSubmit = async(e)=> {
         e.preventDefault();
         
-        const id = await createOrder({...FormData,idOrder, total, PaymentMethod});
+        const id = await createOrder({...FormData,idOrder, total, PaymentMethod, bocatas:CartData.bocatas});
+        
         toast.success("Pedido Realizado!");
         resetCart();
         {
         typeof window !== "undefined" && localStorage.setItem("order", id);
         }
 
-        sendEmail();
-        router.push(`/order/${id}`);
+    // router.push(`/order/${id}`);
     }
   
+    console.log(CartData.bocatas.map(el => el._id));
     return(
         <>
         <Modal
@@ -70,11 +60,10 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
         onClose={()=>setOpened(null)}
         >
         {/* Modal content */}
-        <form onSubmit={handleSubmit} className={css.formContainer} ref={form}>
+        <form onSubmit={handleSubmit} className={css.formContainer} >
             <input type="text" name='name' required placeholder="Nombre" onChange={handleInput}/>
             <input type="text" name='phone' required placeholder="Número de telefono" onChange={handleInput}/>
             <input type="text" name='email' required placeholder="Email" onChange={handleInput}/>
-            <input type="hidden" name='id' value={idOrder}/>
             <textarea required name='address' placeholder="Dirección" rows={3} columnns={8} onChange={handleInput}/>
             <table className={css.table}>
                 <thead>
@@ -87,7 +76,6 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
                 <tbody className={css.tbody}>
                     {CartData.bocatas.length > 0 &&
                         CartData.bocatas?.map((bocata, i) => {
-                        const src = urlFor(bocata.image).url();
                             return (
                                 <tr key={i}>
                                     <td>{bocata.name}</td>
