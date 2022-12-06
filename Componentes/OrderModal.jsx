@@ -7,24 +7,11 @@ import { useRouter } from "next/router";
 import { useStore } from "../store/store";
 import emailjs from '@emailjs/browser';
 import React, {useRef} from "react";
-
-function generarRandom(num) {
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    const charactersLength = characters.length;
-    let result = "";
-      for (let i = 0; i < num; i++) {
-          result += characters.charAt(Math.floor(Math.random() * charactersLength));
-      }
-  
-    return result;
-  }
-
-  const idOrder = generarRandom(6);
-  console.log(idOrder);
+import { urlFor } from "../lib/client";
 
 
 export default function OrderModal({opened, setOpened, PaymentMethod}) {
-
+    
     const router = useRouter();
     const theme = useMantineTheme()
     const [FormData, setFormData] = useState({})
@@ -57,11 +44,13 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
         sendEmail();
         router.push(`/order/${id}`);
     }
+  
     return(
         <>
         <Modal
         overlayColor={theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[2]}
         overlayOpacity={0.55}
+        size ={700}
         overlayBlur={3}
         opened={opened}
         onClose={()=>setOpened(null)}
@@ -73,6 +62,34 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
             <input type="text" name='email' required placeholder="Email" onChange={handleInput}/>
             <input type="hidden" name='id' value={idOrder} />
             <textarea required name='address' placeholder="Dirección" rows={3} columnns={8} onChange={handleInput}/>
+            <table className={css.table}>
+                <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Tamaño</th>
+                    <th>Cantidad</th>
+                </tr>
+                </thead>
+                <tbody className={css.tbody}>
+                    {CartData.bocatas.length > 0 &&
+                        CartData.bocatas?.map((bocata, i) => {
+                        const src = urlFor(bocata.image).url();
+                            return (
+                                <tr key={i}>
+                                    <td>{bocata.name}</td>
+                                    <td>
+                                        {bocata.size === 0
+                                        ? "Small"
+                                        : bocata.size === 1
+                                        ? "Medium"
+                                        : "Large"}
+                                    </td>
+                                    <td>{bocata.quantity}</td>
+                                </tr>
+                            );
+                    })}
+                </tbody>
+            </table>
             {PaymentMethod===0 ? 
             <span>
                 Vas a pagar <span>{total}€</span> en tu entrega
