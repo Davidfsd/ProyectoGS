@@ -8,6 +8,7 @@ export default async function handler(req, res) {
         await client
           .create({
             _type: "order",
+            idOrder: newOrder.idOrder,
             name: newOrder.name,
             address: newOrder.address,
             email: newOrder.email,

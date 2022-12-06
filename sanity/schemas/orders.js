@@ -4,6 +4,14 @@ export default {
     type: "document",
     fields: [
         {
+            name : 'idOrder',
+            title: 'IdOrder',
+            type: 'string',
+            options : {
+                maxLength: 40
+            }
+        },
+        {
             name : 'name',
             title: 'Name',
             type: 'string',

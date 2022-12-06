@@ -8,9 +8,23 @@ import { useStore } from "../store/store";
 import emailjs from '@emailjs/browser';
 import React, {useRef} from "react";
 
+function generarRandom(num) {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const charactersLength = characters.length;
+    let result = "";
+      for (let i = 0; i < num; i++) {
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+  
+    return result;
+  }
+
+  const idOrder = generarRandom(6);
+  console.log(idOrder);
+
 
 export default function OrderModal({opened, setOpened, PaymentMethod}) {
-    
+
     const router = useRouter();
     const theme = useMantineTheme()
     const [FormData, setFormData] = useState({})
@@ -32,7 +46,8 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
 
     const handleSubmit = async(e)=> {
         e.preventDefault();
-        const id = await createOrder({...FormData, total, PaymentMethod});
+        
+        const id = await createOrder({...FormData,idOrder, total, PaymentMethod});
         toast.success("Pedido Realizado!");
         resetCart();
         {
@@ -56,7 +71,7 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
             <input type="text" name='name' required placeholder="Nombre" onChange={handleInput}/>
             <input type="text" name='phone' required placeholder="Número de telefono" onChange={handleInput}/>
             <input type="text" name='email' required placeholder="Email" onChange={handleInput}/>
-            <input type="hidden" name='id' />
+            <input type="hidden" name='id' value={idOrder} />
             <textarea required name='address' placeholder="Dirección" rows={3} columnns={8} onChange={handleInput}/>
             {PaymentMethod===0 ? 
             <span>
